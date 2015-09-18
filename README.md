@@ -3,5 +3,5 @@
 
 ### CS13303T03 - Lenguaje Java
 
-#### 3.6 Arreglos
+#### 3.7 Strings
 
