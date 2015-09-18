@@ -3,5 +3,5 @@
 
 ### CS13303T03 - Lenguaje Java
 
-#### 3.3 Datos primitivos
+#### 3.4 Literales
 
