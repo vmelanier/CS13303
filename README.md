@@ -3,5 +3,5 @@
 
 ### CS13303T03 - Lenguaje Java
 
-#### 3.5 Operadores
+#### 3.6 Arreglos
 
