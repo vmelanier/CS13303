@@ -3,5 +3,6 @@
 
 ### CS13303T03 - Lenguaje Java
 
-#### Prácticas 1 y 2
+#### Actividad 1 - Operador aritmético
+#### Actividad 2 - Operadores Lógicos  
 
