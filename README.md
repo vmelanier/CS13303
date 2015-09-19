@@ -3,5 +3,5 @@
 
 ### CS13303T03 - Lenguaje Java
 
-#### 3.8 Casting
+#### Prácticas 1 y 2
 
