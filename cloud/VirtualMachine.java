@@ -1,12 +1,13 @@
 package cloud;
 
 class VirtualMachine {
-	String id;				// Identificador único
-	String name;			// Nombre
-	long memoryGB;			// Memoria en GB
-	int cpuCount;			// Número de CPU
-	boolean powerStatus;	// Estado
-	NetworkCard[] nics;		// Tarjetas de Red Virtuales
+	int id;                  // Identificador único
+	int cpuCount;            // Número de CPU
+	long memoryGB;           // Memoria en GB
+	boolean powerStatus;     // Estado
+	String name;             // Nombre
+	String guestOS;          // Sistema Operativo
+	NetworkCard[] nics;      // Tarjetas de Red Virtuales
 	
 	boolean isPoweredOn() {
 		/* Validar si la VM está prendida */
