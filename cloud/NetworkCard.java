@@ -1,7 +1,7 @@
 package cloud;
 
 class NetworkCard {
-	static int maxSpeedMb = 100;        // 100 Mb - Full Duplex
+	static final int MAX_SPEED_MB = 100;// 100 Mb - Full Duplex	
 	int speedMb;                        // Velocidad
 	String macAddress;                  // Dirección física
 	String network;                     // Segmento de red
