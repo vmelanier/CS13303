@@ -34,7 +34,7 @@ class VirtualMachine {
 		this.name = name;
 		}
 	
-	void addNICs(NetworkCard[] nics) {
+	void addNICs(NetworkCard ... nics) {
 		/* Asignar NICs a la VM */
 		this.nics = nics;
 		}
