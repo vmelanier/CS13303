@@ -3,5 +3,5 @@
 
 ### CS13303T05 - Programación Orientada a objetos
 
-#### Clases y Objetos en Java
+#### Métodos de Clase
 
