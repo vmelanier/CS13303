@@ -10,9 +10,6 @@ public class Main {
 		nic1.macAddress = "64-D9-2C-A1-BD-B5";
 		nic1.speedMb = 100;
 		nic1.setUnit(1);
-
-		// Imprimiendo variables de instancia
-		printNICInfo(nic1);
 		
 		NetworkCard nic2 = new NetworkCard();
 		nic2.network = "192.168.1.0";
@@ -20,7 +17,8 @@ public class Main {
 		nic2.speedMb = 1000;     // 1000 Mb Full duplex
 		nic2.setUnit(2);
 
-		// Imprimiendo variables de instancia		
+		// Imprimiendo variables de instancia
+		printNICInfo(nic1);
 		printNICInfo(nic2);
 		
 	}
