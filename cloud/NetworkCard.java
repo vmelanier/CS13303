@@ -2,13 +2,13 @@ package cloud;
 
 import cloud.util.CloudUtil;
 
-class NetworkCard {
-	static final int MAX_SPEED_MB = 100;            
-	final String macAddress;            
-	final int unitNumber;  
-	final String label;
-	int speedMb = MAX_SPEED_MB;
-	String network;                                         
+public class NetworkCard {
+	public static final int MAX_SPEED_MB = 100;            
+	public final String macAddress;            
+	public final int unitNumber;  
+	public final String label;
+	public int speedMb = MAX_SPEED_MB;
+	public String network;                                         
 
 	NetworkCard(int unitNumber){
 		this.unitNumber = unitNumber;

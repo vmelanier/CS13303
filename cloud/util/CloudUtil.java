@@ -2,6 +2,8 @@ package cloud.util;
 
 import java.util.Random;
 
+import cloud.NetworkCard;
+
 public class CloudUtil {
     static int macElements = 6;
     
@@ -31,5 +33,12 @@ public class CloudUtil {
 
 	    // Regresar la dirección MAC en mayúsculas
 	    return mac.toString().toUpperCase();
+	}
+	public static void printNICInfo(NetworkCard nic){
+		System.out.println("MAC Address: " + nic.macAddress);
+		System.out.println("Speed      : " + nic.speedMb +" " + (nic.speedMb <= NetworkCard.MAX_SPEED_MB? "OK": "ERR"));
+		System.out.println("Network    : " + nic.network);
+		System.out.println("Label      : " + nic.label);
+		System.out.println("");
 	}
 }
