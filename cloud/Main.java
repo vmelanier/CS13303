@@ -6,18 +6,26 @@ public class Main {
 	// Método principal
 	public static void main(String[] args) {
 		if (args.length > 1){
-			// Creando objetos NetworkCard
-			// asumiendo que los argumentos de entrada
-			// son dos redes con mascara de red 0.0.0.0/24
+			// 1. Creando objeto vm1 basado en VirtualMachine
+			// Escribe tu código {
+			
+			// }
+			
 			NetworkCard nic1 = new NetworkCard(args[0], 1);
 			NetworkCard nic2 = new NetworkCard(args[1], 2, 1000);
+
+			// 2. Asignando nic1 y nic2 a VirtualMachine.nics
+			// Escribe tu código {
 			
-			//Imprimiendo nic1, nic2 y nic3
-			CloudUtil.printNICInfo(nic1);
-			CloudUtil.printNICInfo(nic2);
+			// }
+
+			// 3. Imprimiendo variables de VM1
+			// Escribe tu código {
+			
+			// }
 		} else {
 			System.out.println("Al menos un argumento es necesario.");
-			System.out.println("java -jar Cloud.jar \"red1/mascara1\" \"red2/mascara2\"");
+			System.out.println("java -jar Cloud.jar \"name\" \"guestOs\" \"memoryGB\" \"cpuCount\"");
 		}
 	}
 	
