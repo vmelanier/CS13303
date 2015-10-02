@@ -1,4 +1,4 @@
 ## CS13303 - Computación en Java
 - Por: Jose Manuel Lopez Lujan, MIT
 
-### Clases en Java SE
+### Comparación de tipos de dato con métodos de comparación
