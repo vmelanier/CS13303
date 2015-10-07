@@ -3,5 +3,5 @@
 
 ### CS13303T07 - Manejo de Excepciones 
 
-#### Error de Sintaxis
+#### Error de Tiempo de Ejecución
 
