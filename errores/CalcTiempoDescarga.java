@@ -12,7 +12,7 @@ class CalcTiempoDescarga {
         public static void main(String[] args){
                 // arreglos declarados e inicializados
                 double[] tamanosMB = {1024d, 2048d, 4096d};
-                double[] velocidadesMbps = {2.1d, 0.9d, 4.2d};
+                double[] velocidadesMbps = {2.1d, 0.9d, new Double(null)};
                 
                 for (double tamanoMB: tamanosMB){
                         for (double velocidadMbps: velocidadesMbps){
