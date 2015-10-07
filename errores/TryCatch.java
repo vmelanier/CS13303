@@ -15,14 +15,11 @@ public class TryCatch {
 					 String nulo = null;
 					 System.out.println(nulo.length());
 				 }
-			 } catch (NullPointerException ex ){
+			 } catch (NullPointerException ex ){        // Subclase
 				 System.out.println(String.format("Occurrio un error de tipo %s: %s %s", 
-						 ex.toString(), ex.getMessage(), ex.getStackTrace()));				 
-			 } catch (ArithmeticException ex){
-				 System.out.println(String.format("Occurrio un error de tipo %s: %s %s", 
-						 ex.toString(), ex.getMessage(), ex.getStackTrace()));
-			 } catch (ArrayIndexOutOfBoundsException ex){
-				 System.out.println(String.format("Occurrio un error de tipo %s: %s %s", 
+						 ex.toString(), ex.getMessage(), ex.getStackTrace()));		
+			 } catch (Throwable ex){                    // Super clase
+				 System.out.println(String.format("Occurrio un error de tipo Throwable %s: %s %s", 
 						 ex.toString(), ex.getMessage(), ex.getStackTrace()));
 			 }
 		}
