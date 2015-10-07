@@ -10,10 +10,11 @@ class CalcTiempoDescarga {
         
         // Método principal
         public static void main(String[] args){
-                // arreglos declarados e inicializados
-                double[] tamanosMB = {1024d, 2048d, 4096d};
-                double[] velocidadesMbps = {2.1d, 0.9d, new Double(null)};
-                
+            // arreglos declarados e inicializados
+        	try{
+            double[] tamanosMB = {1024d, 2048d, 4096d};
+            double[] velocidadesMbps = {2.1d, 0.9d, new Double(null)};
+            
                 for (double tamanoMB: tamanosMB){
                         for (double velocidadMbps: velocidadesMbps){
                                 double tiempo = CalcTiempoDescarga.calculaTiempo(velocidadMbps, tamanoMB);
@@ -21,5 +22,9 @@ class CalcTiempoDescarga {
                                                 + "estará lista en %.2f segundos", tamanoMB, velocidadMbps, tiempo ));
                         }
                 }
+             } catch (NullPointerException ex){
+            	 System.out.println(String.format("Ocurrió un error: %s (%s)", ex.toString(), ex.getCause()));
+             } 
+        	System.out.println("Fin del programa.");
         }
 }
