@@ -3,5 +3,5 @@
 
 ### CS13303T08 - Conceptos avanzados de POO 
 
-#### Encapsulación
+#### Métodos de acceso: Getters
 
