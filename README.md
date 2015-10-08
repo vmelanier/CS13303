@@ -3,5 +3,5 @@
 
 ### CS13303T08 - Conceptos avanzados de POO 
 
-#### Métodos de acceso: Getters
+#### Métodos de acceso: Getters y Setters
 
