@@ -15,6 +15,8 @@ public class Throws {
 		} catch (IOException ex){
 			System.out.println(String.format("Occurrio un error de tipo %s: %s %s", 
 					 ex.toString(), ex.getMessage(), ex.getStackTrace()));
+		} finally {
+			System.out.println("Código que siempre se ejecutará");
 		}
 		System.out.println("Fin del programa.");
 	}
