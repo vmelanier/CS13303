@@ -2,7 +2,7 @@ package oop;
 
 class CalcTiempoDescarga {
 	static final double VELOCIDAD_DEFAULT = 1.0d;
-	double velocidadMbps;		
+	private double velocidadMbps;		
 	double tiempo;
 	
 	public CalcTiempoDescarga(){
