@@ -3,5 +3,5 @@
 
 ### CS13303T07 - Manejo de Excepciones 
 
-#### Lanzando excepciones con throw
+#### Lanzando excepciones con throws
 
