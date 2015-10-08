@@ -15,6 +15,9 @@ public class TryCatch {
 						 String nulo = null;
 						 System.out.println(nulo.length());
 						 }	
+					 else if (array1[i] == 4){
+						 throw new ArithmeticException();    // lanzando una excepción de tipo ArithmeticException
+					 }
 					 } catch (NullPointerException ex ) {        // Subclase
 						 System.out.println(String.format("Occurrio un error de tipo %s: %s %s", 
 								 ex.toString(), ex.getMessage(), ex.getStackTrace()));
