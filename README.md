@@ -1,7 +1,7 @@
 ## CS13303 - Computación en Java
 - Por: Jose Manuel Lopez Lujan, MIT
 
-### CS13303T07 - Manejo de Excepciones 
+### CS13303T08 - Conceptos avanzados de POO 
 
-#### Excepciones personalizadas
+#### Sobrecarga de métodos
 
