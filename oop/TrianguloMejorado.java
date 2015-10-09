@@ -10,13 +10,12 @@ public class TrianguloMejorado extends Triangulo{
 		super(color);
 		this.setAlto(alto);
 		this.setAncho(ancho);
-		this.area();
+		this.setArea(this.calculaArea());;
 	}
 	
 	@Override
-	public double area(){
-		this.area = this.getAncho() * this.getAlto()/2;
-		return this.area;
+	public double calculaArea(){
+		return this.getAncho() * this.getAlto()/2;
 	}
 	
 	@Override

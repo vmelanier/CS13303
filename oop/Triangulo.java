@@ -1,6 +1,6 @@
 package oop;
 
-public class Triangulo extends Forma2d{  
+public class Triangulo extends Forma2d {  
 	private double ancho;
 	private double alto;
 	
@@ -14,9 +14,8 @@ public class Triangulo extends Forma2d{
 		this.setAncho(ancho);           
 	}
 	
-	@Override
-	public double area(){
-		return this.getAncho() * this.getAlto()/2; 
+	public double calculaArea(){
+		return this.getAncho() * this.getAlto()/2;
 	}
 	
 	@Override

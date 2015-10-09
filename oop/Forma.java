@@ -14,7 +14,4 @@ public abstract class Forma {
 	public void setColor(String color) {
 		this.color = color;
 	}
-	
-	public abstract double area();
-	
 }

@@ -1,16 +1,12 @@
 package oop;
 
-public class Forma2d extends Forma{
+public class Forma2d extends Forma implements Cuantificable{
 	private String tipo;
 	
 	public Forma2d(String color){
 		super(color);
 	}
 
-	@Override
-	public double area() {
-		return 0;
-	}
 	// Getters and Setters
 	public String getTipo() {
 		return tipo;
@@ -18,5 +14,15 @@ public class Forma2d extends Forma{
 
 	public void setTipo(String tipo) {
 		this.tipo = tipo;
+	}
+
+	@Override
+	public double calculaPerimetro() {
+		return 0;
+	}
+
+	@Override
+	public double calculaArea() {
+		return 0;
 	}
 }
