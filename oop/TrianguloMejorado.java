@@ -3,8 +3,13 @@ package oop;
 public class TrianguloMejorado extends Triangulo{
 	private double area;
 
-	public TrianguloMejorado(Double ancho, Double alto) {
-		super(ancho, alto);
+	public TrianguloMejorado(String color){
+		super(color);
+	}
+	public TrianguloMejorado(String color, Double ancho, Double alto) {
+		super(color);
+		this.setAlto(alto);
+		this.setAncho(ancho);
 		this.area();
 	}
 	
@@ -16,11 +21,12 @@ public class TrianguloMejorado extends Triangulo{
 	
 	@Override
 	public String toString(){
-		return String.format("Ancho: %s, Alto: %s, Color: %s, Area: %s", 
+		return String.format("Ancho: %s, Alto: %s, Color: %s, Area: %s, Tipo: %s", 
 				this.getAncho(), 
 				this.getAlto(), 
 				this.getColor(),
-				this.getArea());
+				this.getArea(),
+				this.getTipo());
 	}
 
 	public double getArea() {

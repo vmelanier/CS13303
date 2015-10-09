@@ -1,19 +1,22 @@
 package oop;
 
-public class Forma2d {
-	private double ancho;
-	private double alto;
+public class Forma2d extends Forma{
+	private String tipo;
 	
-	public double getAncho() {
-		return ancho;
+	public Forma2d(String color){
+		super(color);
 	}
-	public void setAncho(double ancho) {
-		this.ancho = ancho;
+
+	@Override
+	public double area() {
+		return 0;
 	}
-	public double getAlto() {
-		return alto;
+	// Getters and Setters
+	public String getTipo() {
+		return tipo;
 	}
-	public void setAlto(double alto) {
-		this.alto = alto;
+
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
 	}
 }
