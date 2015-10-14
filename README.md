@@ -1,7 +1,7 @@
 ## CS13303 - Computación en Java
 - Por: Jose Manuel Lopez Lujan, MIT
 
-### CS13303T08 - Conceptos avanzados de POO 
+### CS13303T09 - Entrada y Salida de datos 
 
-#### Interfaces
+#### Entrada y salida en Java.
 
