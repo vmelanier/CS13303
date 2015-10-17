@@ -3,5 +3,5 @@
 
 ### CS13303T09 - Entrada y Salida de datos 
 
-#### Character Streams
+#### Buffered Streams
 
