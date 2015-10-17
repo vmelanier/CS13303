@@ -3,5 +3,5 @@
 
 ### CS13303T09 - Entrada y Salida de datos 
 
-#### Byte Streams
+#### Character Streams
 
