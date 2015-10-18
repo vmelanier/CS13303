@@ -1,0 +1,21 @@
+Administrador de Archivos
+
+Opciones: 
+(1) Copiar Archivo
+(2) Leer Archivo
+(3) Salir
+
+Por favor ingrese una opción: 
+Ingrese archivo origen:
+Ingrese archivo destino:
+
+Se copiará README.md a README2.md 
+Administrador de Archivos
+
+Opciones: 
+(1) Copiar Archivo
+(2) Leer Archivo
+(3) Salir
+
+Por favor ingrese una opción: 
+Saliendo..
