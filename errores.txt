@@ -1,4 +1,0 @@
-Opción inválida. class java.util.InputMismatchException. 
-Opción inválida. class java.util.InputMismatchException. 
-Opción inválida.
-Opción inválida.
