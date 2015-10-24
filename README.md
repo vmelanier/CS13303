@@ -3,5 +3,6 @@
 
 ### CS13303T10 - Bases de datos en Java
 
-#### Conexión a bases de datos desde Java con JDBC
+#### Hibernate
+
 
