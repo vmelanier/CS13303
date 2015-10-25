@@ -1,64 +1,84 @@
 package db;
-import org.hibernate.SessionFactory;
-import org.hibernate.Session;
-import org.hibernate.cfg.Configuration;
-import org.hibernate.Query;
-
-import java.util.List;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
 
 public class Chinook {
-	public static void main(String[] args) {
-		/* 
-		 * A. Crea y persiste dos objetos de 
-		 *    tipo Artist
-		 * */
-		// 1. Inicializa la fábrica de sesiones
-		SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
-		// 2. Abre la sessión
-		Session session = sessionFactory.openSession();
+	private String database;
+	private Connection connection;
+	private Statement statement;
+	
+	public Chinook(String db) throws ClassNotFoundException, SQLException{
+		this.database = db;
+		// 1. Obtener el Driver correcto para la base de datos
+		// Escribe tu código aquí{
 		
-		// 3. Crea objetos a persistir
-		Artist artist1 = new Artist();
-		Artist artist2 = new Artist();
-		
-		artist1.setName("Steven Wilson");
-		artist1.setArtistId(276);
-		artist2.setName("Porcupine Tree");
-		artist2.setArtistId(277);
-		
-		// 4. Inicia la transacción
-		session.beginTransaction();
-		// 5. Guarda los objetos de tipo Artist previamente creados
-		session.save(artist1);
-		session.save(artist2);
-		// 6. Escribe los datos
-		session.getTransaction().commit();
-		
-		/*
-		 * B. Consulta la base de datos
-		 *    para buscar los objetos 
-		 *    previamente persistidos
-		 * */
-		// 1. Crea un objeto query a partir del metodo createQuery()
-		Query query = session.createQuery("from Artist where ArtistId in (276, 277)" );
-		
-		// 2. Obtiene los resultados en una lista
-		List<?> resultados = query.list();
-		System.out.format("Resultados: %s\n", resultados.size());
-		
-		// 3. Imprime cada uno de los elementos dentro de resultados 
-		resultados.forEach(System.out::println);
-		
-		// 4. Crea dos objetos y hace casting del elemento 0 y 1 a Artist
-		Artist artist1DB = (Artist) resultados.get(0);
-		Artist artist2DB = (Artist) resultados.get(1);
-		
-		System.out.format("Artista: %s, id: %s", artist1DB.getName(), artist1DB.getArtistId());
-		System.out.format("Artista: %s, id: %s", artist2DB.getName(), artist2DB.getArtistId());
-		
-		session.close();
-		sessionFactory.close();
-		
+		// }
+		this.connection = DriverManager.getConnection("jdbc:sqlite:" + database);
+		this.statement = connection.createStatement();
 	}
 
+	public Connection getConnection() {
+		return connection;
+	}
+
+	public ArrayList<Customer> getCustomers() throws SQLException{
+		ResultSet rs = this.statement.executeQuery("select * from customer");
+		ArrayList<Customer> customers = new ArrayList<Customer>();
+		while (rs.next()){
+			Customer temp = new Customer();
+			temp.setCustomerId(rs.getInt("CustomerId"));
+			temp.setFirstName(rs.getString("FirstName"));
+			temp.setLastName(rs.getString("LastName"));
+			temp.setCompany(rs.getString("Company"));
+			temp.setAddress(rs.getString("Address"));
+			temp.setCity(rs.getString("City"));
+			temp.setState(rs.getString("State"));
+			temp.setCountry(rs.getString("Country"));
+			temp.setPostalCode(rs.getString("PostalCode"));
+			temp.setPhone(rs.getString("Phone"));
+			temp.setFax(rs.getString("Fax"));
+			temp.setEmail(rs.getString("Email"));
+			temp.setSupportRepId(rs.getInt("SupportRepId"));
+			customers.add(temp);
+		}
+		return customers;
+	}
+	
+	public boolean addCustomer(Customer customer) throws SQLException{
+		String sql = "insert into Customer(FirstName, LastName, Company, Address, "
+				+ "City, State, Country, PostalCode, Phone, Fax, Email, SupportRepId) "
+				+ "values (?,?,?,?,?,?,?,?,?,?,?,?)";
+		PreparedStatement prepStmt = this.connection.prepareStatement(sql);
+		// 2. Agregar los atributos del objeto customer al PreparedStatement
+		// Escribe tu código aquí{
+		
+		// }
+		return prepStmt.execute();
+	}
+	
+	public int deleteCustomer(Customer customer) throws SQLException{
+		String sql = "delete from Customer where CustomerId = ? ";
+		PreparedStatement prepStmt = this.connection.prepareStatement(sql);
+		prepStmt.setInt(1, customer.getCustomerId());
+		prepStmt.execute();
+		return prepStmt.getUpdateCount();
+	}
+	
+	public int updateCustomer(Customer customer) throws SQLException{
+		String sql = "update customer set FirstName=?, LastName=?, Company=?, Address=?, City=?, "
+				+ "State=?, Country=?, PostalCode=?, Phone=?, Fax=?, Email=?, SupportRepId=?"
+				+ "where CustomerId = ?";
+		PreparedStatement prepStmt = this.connection.prepareStatement(sql);
+		// 3. Agregar los atributos del objeto customer al PreparedStatement
+		// Escribe tu código aquí{
+		
+		// }
+		prepStmt.execute();
+		return prepStmt.getUpdateCount();
+	}
 }

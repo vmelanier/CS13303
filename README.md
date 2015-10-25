@@ -3,6 +3,4 @@
 
 ### CS13303T10 - Bases de datos en Java
 
-#### Hibernate
-
-
+#### Actividad 1
