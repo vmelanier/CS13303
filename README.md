@@ -3,6 +3,6 @@
 
 ### CS13303T11 - Recursos Web 
 
-#### Sockets
+#### REST Web Services
 
 
