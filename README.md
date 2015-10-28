@@ -3,6 +3,6 @@
 
 ### CS13303T11 - Recursos Web 
 
-#### REST Web Services
+#### Web Scraping
 
 
