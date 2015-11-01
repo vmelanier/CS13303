@@ -3,6 +3,4 @@
 
 ### CS13303T12 - Expresiones Lambda
  
-#### Expresiones Lambda
-
-
+#### Métodos de Referencia
