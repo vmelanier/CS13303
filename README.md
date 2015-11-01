@@ -3,6 +3,6 @@
 
 ### CS13303T12 - Expresiones Lambda
  
-#### Clases anónimas
+#### Expresiones Lambda
 
 
